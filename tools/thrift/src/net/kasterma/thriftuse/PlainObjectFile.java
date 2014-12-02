@@ -15,8 +15,7 @@ public class PlainObjectFile {
 		LabeledNumber ln = new LabeledNumber("lab", (short) 4);
 		
 		try {
-			FileOutputStream fos;
-			fos = new FileOutputStream("t.tmp");
+			FileOutputStream fos = new FileOutputStream("t.tmp");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(ln);
 			fos.close();
@@ -29,17 +28,15 @@ public class PlainObjectFile {
 		}
 		
 
-			FileInputStream fis;
-			try {
-				fis = new FileInputStream("t.tmp");
-			ObjectInputStream ois;
-				ois = new ObjectInputStream(fis);
-				System.out.println(ois.readObject().toString());
-				ois.close();
-			} catch (ClassNotFoundException | IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		try {
+			FileInputStream fis = new FileInputStream("t.tmp");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			System.out.println(ois.readObject().toString());
+			ois.close();
+		} catch (ClassNotFoundException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 	}
