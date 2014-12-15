@@ -1,0 +1,8 @@
+{"type": "record",
+ "name": "dataunit",
+ "fields":[
+   {"name" : "ednData","type":"string"},
+   {"name" : "value", "type" : [{"name":"ACount","type":"long"},
+                                {"name":"BCount","type":"long"}]}
+  ]
+}
