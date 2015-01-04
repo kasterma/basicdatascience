@@ -44,7 +44,7 @@ run.on.fold <- function(dat, fold) {
     predlm <- data.frame(X=test.fold$X,
                          p=ifelse(pred < 1, ifelse(pred > 0, pred, 0.0001), 0.9999))
     list(loss=loss(predlm),coeff=fit$coefficients,out.of.bounds=sum(pred < 0 | pred > 1),
-         pred=pred)
+         pred=pred, X=test.fold$X)
 }
 
 cv.res <- lapply(seq_along(train.cv.dat), f(idx, run.on.fold(train, train.cv.dat[[idx]])))
@@ -116,3 +116,23 @@ stat.bp <- function(sf) {
 }
 
 stat.bp(mean)
+
+# get list of confident wrong
+# those that individually have large contibution to loss
+
+bound.pred <- function(res) {
+    data.frame(X=res$X,
+               p=ifelse(res$pred < 1, ifelse(res$pred > 0, res$pred, 0.0001), 0.9999))
+}
+
+hist(bound.pred(cv.res.bc[[1]])[,2])
+
+ss <- Reduce(rbind,
+             lapply(seq_along(cv.res.bc),
+                    f(idx, data.frame(id=idx, lab="bc", bound.pred(cv.res.bc[[idx]])))))
+ss2 <- Reduce(rbind,
+              lapply(seq_along(cv.res),
+                     f(idx, data.frame(id=idx, lab="cv", bound.pred(cv.res[[idx]])))))
+ssa <- rbind(ss, ss2)
+
+ggplot(ssa, aes(x=p)) + facet_grid(id ~ lab) + geom_freqpoly()
