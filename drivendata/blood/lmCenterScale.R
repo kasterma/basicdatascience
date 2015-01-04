@@ -13,10 +13,6 @@ library(gmodels)
 library(devtools)
 devtools::load_all()
 
-test <- tbl_df(read.csv("data/test.csv"))
-train <- tbl_df(read.csv("data/train.csv"))
-
-
 test <- tbl_df(read.csv("data/test.csv",
                         colClasses=c("integer",
                             "numeric", "numeric", "numeric", "numeric")))
@@ -39,18 +35,19 @@ train.cv.dat <- createFolds(train$Made.Donation.in.March.2007, k = 10, returnTra
 str(train.cv.dat)
 str(train)
 
-run.on.fold <- function(fold) {
-    train.fold <- train[fold,]
-    test.fold <- train[-fold,]
-    fit <- lm(Made.Donation.in.March.2007 ~  Months.since.Last.Donation + Months.since.First.Donation + Number.of.Donations, train.fold)
+run.on.fold <- function(dat, fold) {
+    train.fold <- dat[fold,]
+    test.fold <- dat[-fold,]
+    fit <- lm(Made.Donation.in.March.2007 ~ Months.since.Last.Donation + Months.since.First.Donation + Number.of.Donations, train.fold)
+#    print(fit$coefficients)
     pred <- predict(fit, test.fold)
     predlm <- data.frame(X=test.fold$X,
                          p=ifelse(pred < 1, ifelse(pred > 0, pred, 0.0001), 0.9999))
-    loss(predlm)
-    list(loss=loss(predlm),coeff=fit$coefficients)
+    list(loss=loss(predlm),coeff=fit$coefficients,out.of.bounds=sum(pred < 0 | pred > 1),
+         pred=pred)
 }
 
-cv.res <- lapply(seq_along(train.cv.dat), f(idx, run.on.fold(train.cv.dat[[idx]])))
+cv.res <- lapply(seq_along(train.cv.dat), f(idx, run.on.fold(train, train.cv.dat[[idx]])))
 cv.losses <- sapply(cv.res, f(x, x$loss))
 mean(cv.losses)
 
@@ -60,19 +57,9 @@ train.pp <- predict(preProcValues, as.data.frame(train[,2:4]))
 
 train.bc <- data.frame(X=train$X, train.pp, Made.Donation.in.March.2007=train$Made.Donation.in.March.2007)
 
-run.on.fold <- function(fold) {
-    train.fold <- train.bc[fold,]
-    test.fold <- train.bc[-fold,]
-    fit <- lm(Made.Donation.in.March.2007 ~ Months.since.Last.Donation + Months.since.First.Donation + Number.of.Donations, train.fold)
-#    print(fit$coefficients)
-    pred <- predict(fit, test.fold)
-    predlm <- data.frame(X=test.fold$X,
-                         p=ifelse(pred < 1, ifelse(pred > 0, pred, 0.0001), 0.9999))
-    list(loss=loss(predlm),coeff=fit$coefficients)
-}
 
 
-cv.res.bc <- lapply(seq_along(train.cv.dat), f(idx, run.on.fold(train.cv.dat[[idx]])))
+cv.res.bc <- lapply(seq_along(train.cv.dat), f(idx, run.on.fold(train.bc, train.cv.dat[[idx]])))
 cv.bc.losses <- sapply(cv.res.bc, f(x, x$loss))
 mean(cv.bc.losses)
 
@@ -117,3 +104,15 @@ zz <- data.frame(id=seq_along(train.cv.dat),
 zz <- melt(zz, id.vars = "id")
 
 ggplot(zz, aes(x=id, y=value, color=variable)) + geom_point()
+
+sum(sapply(cv.res, f(x, x$out.of.bounds)))
+sum(sapply(cv.res.bc, f(x, x$out.of.bounds)))
+
+# boxplot comparint a statistic of the results
+stat.bp <- function(sf) {
+    ms <- rbind(data.frame(id="cv", dat=sapply(cv.res, f(x, sf(x$pred)))),
+                data.frame(id="bc", dat=sapply(cv.res.bc, f(x, sf(x$pred)))))
+    boxplot(dat ~ id, ms)
+}
+
+stat.bp(mean)
