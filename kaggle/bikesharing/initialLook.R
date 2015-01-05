@@ -1,4 +1,3 @@
-library(devtools)
 library(dplyr)
 library(pryr)
 library(caret)
@@ -20,6 +19,7 @@ dat.train <- tbl_df(read.csv("data/train.csv", stringsAsFactors=FALSE))
 str(dat.train)
 nrow(dat.train)   # 10,886
 
+# enrich data
 dat.train <- within(dat.train, {tod <- as.factor(hour(ymd_hms(datetime)))
                                 dow <- as.factor(wday(ymd_hms(datetime)))})
 dat.test <- within(dat.test, {tod <- as.factor(hour(ymd_hms(datetime)))
@@ -32,8 +32,6 @@ table(dat.train$temp == dat.train$atemp)
 table(dat.train$temp > dat.train$atemp)
 
 hist(dat.train$humidity, breaks = seq(101)-1)
-
-# ggpairs(dat.train[-1])  # very slow.
 
 ggpairs(dat.train[c("temp", "atemp")])
 
@@ -63,3 +61,18 @@ sampleSubmission$count <- count.preds
 sampleSubmission$count <- sapply(sampleSubmission$count, f(x, round(max(0,x))))
 
 write.csv(sampleSubmission, "linear.csv", row.names=FALSE)
+
+# get folds for cross validataion
+cv.folds <- createFolds(dat.train$count, k=10)
+
+run.on.fold <- function(dat, test.idx) {
+    train.dat <- dat[-test.idx,]
+    test.dat <- dat[test.idx,]
+    fit <- lm(count ~ tod + dow + season + holiday + workingday + weather + temp + atemp + humidity + windspeed,
+              train.dat)
+    pred <- sapply(predict(fit, newdata = test.dat),
+                   f(x, round(max(0,x))))
+    loss(pred, test.dat$count)
+}
+
+sapply(seq_along(cv.folds), f(idx, run.on.fold(dat.train, cv.folds[[idx]])))
