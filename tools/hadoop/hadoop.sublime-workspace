@@ -1,0 +1,492 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"login",
+				"loginbutton"
+			],
+			[
+				"hfs",
+				"hfs-seqfile"
+			],
+			[
+				"from",
+				"fromhostIdx"
+			],
+			[
+				"p",
+				"parseJSON"
+			],
+			[
+				"hostnos",
+				"hostnosform"
+			],
+			[
+				"ba",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Vagrantfile",
+			"settings":
+			{
+				"buffer_size": 211,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "wget http://apache.mirrors.pair.com/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz\nsudo -u vagrant tar xzf /home/vagrant/hadoop-2.6.0.tar.gz -C /home/vagrant\nsudo cat /vagrant/vagrant/resources/dotprofile >> /home/vagrant/.profile",
+			"file": "vagrant/scripts/hadoop.sh",
+			"file_size": 214,
+			"file_write_time": 1420483659000000,
+			"settings":
+			{
+				"buffer_size": 230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vagrant/scripts/basic.sh",
+			"settings":
+			{
+				"buffer_size": 190,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vagrant/resources/dotprofile",
+			"settings":
+			{
+				"buffer_size": 98,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"clj",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"clju",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"cloju",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"cloj",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"clojure",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"replclo",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/User/Clojure.sublime-settings",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/User/R.sublime-settings",
+		"/Users/kasterma/projects/codeR/R-3.1.1/src/library/stats/R/lm.R",
+		"/Users/kasterma/projects/codeR/SparkR-pkg/pkg/R/sparkR.R",
+		"/Users/kasterma/projects/codeR/SparkR-pkg/pkg/R/RDD.R",
+		"/Users/kasterma/projects/codeR/SparkR-pkg/pkg/NAMESPACE",
+		"/Users/kasterma/projects/codeR/SparkR-pkg/pkg/DESCRIPTION",
+		"/Users/kasterma/projects/codeR/rJava/src/rJava.c",
+		"/Users/kasterma/projects/codeR/rJava/src/tools.c",
+		"/Users/kasterma/projects/codeR/rJava/src/callJNI.c",
+		"/Users/kasterma/projects/codeR/rJava/src/loader.c",
+		"/Users/kasterma/projects/codeR/rJava/src/rJava.h",
+		"/Users/kasterma/projects/codeR/R-3.1.1/src/library/stats/R/expand.model.frame.R",
+		"/Users/kasterma/projects/Rcode/rJava/src/jri_glue.c",
+		"/Users/kasterma/projects/Rcode/rJava/R/tools.R",
+		"/Users/kasterma/projects/Rcode/SparkR-pkg/examples/kmeans.R",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/main/names.c",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/library/base/R/frametools.R",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/library/stats/src/cov.c",
+		"/Users/kasterma/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6CAE17C6-BA3A-4D90-8EAE-915946270FF1/v2/analytics-cluster/R.yml",
+		"/Users/kasterma/projects/Rcode/dplyr/R/manip-df.r",
+		"/Users/kasterma/projects/Rcode/caret/pkg/caret/R/additive.R",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/library/stats/R/pairwise.R",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/library/base/R/dates.R",
+		"/Users/kasterma/projects/Rcode/dplyr/R/manip-grouped-dt.r",
+		"/Users/kasterma/projects/Rcode/dplyr/R/manip-dt.r",
+		"/Users/kasterma/projects/Rcode/caret/pkg/caret/R/aaa.R",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kasterma/projects/Rcode/igraph/R/attributes.R",
+		"/Users/kasterma/projects/Rcode/igraph/R/topology.R",
+		"/Users/kasterma/projects/Rcode/igraph/R/basic.R",
+		"/Users/kasterma/projects/Rcode/igraph/R/auto.R",
+		"/Users/kasterma/projects/Rcode/igraph/src/rinterface.c",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/include/Rdefines.h",
+		"/Users/kasterma/projects/Rcode/R-3.1.1/src/main/memory.c",
+		"/Users/kasterma/projects/discreteoptim/slides/lecture-cp-1.pdf",
+		"/Users/kasterma/Desktop/debugNotes.org",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/local_config.edn.example",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/project.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/src/adgoji/rtb/bidder/main.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/src/adgoji/rtb/bidder/system.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/src/adgoji/rtb/bidder/core.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/test/adgoji/platform_test.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/src/adgoji/rtb/bidder/service/campaigns.clj",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/example_campaign.edn",
+		"/Users/kasterma/adgoji/adgoji-rtb-bidder/src/adgoji/rtb/bidder/platform.clj",
+		"/Users/kasterma/projects/rawfblogin/plainwww/Makefile",
+		"/Users/kasterma/projects/Rcode/rjags/src/jags.cc",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/idfamodel.clj",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/getinstallsmodel.clj",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/crossvalidation.clj",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/bidreqsmodel.clj",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/bidreqsfromsample.clj",
+		"/Users/kasterma/adgoji/learn/rework/src/adgoji/rtb/rework/bidfloorinfo.clj",
+		"/Users/kasterma/adgoji/learn/rework/project.clj",
+		"/Users/kasterma/adgoji/learn/rework/test/mixmodeltest.clj",
+		"/Users/kasterma/adgoji/learn/rework/test/reworktest.clj",
+		"/Users/kasterma/adgoji/learn/rework/test/getmodelfromtaptest.clj",
+		"/Users/kasterma/adgoji/learn/rework/README.md",
+		"/Users/kasterma/adgoji/learn/learn/project.clj",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/feature.clj",
+		"/Users/kasterma/adgoji/learn/bidinfos/src/bidinfos.clj",
+		"/Users/kasterma/adgoji/learn/bidinfos/README.md",
+		"/Users/kasterma/adgoji/learn/README.md",
+		"/Users/kasterma/adgoji/learn/bidinfos/Makefile",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/twolevlearn.clj",
+		"/Users/kasterma/adgoji/learn/learn/Makefile",
+		"/Users/kasterma/adgoji/learn/learn/Makefile.old",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/clickanal.clj",
+		"/Users/kasterma/adgoji/learn/bidinfos/project.clj",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/extrataps.clj",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/learn.clj",
+		"/Users/kasterma/adgoji/learn/learn/test/datagen.clj",
+		"/Users/kasterma/adgoji/learn/learn/test/model/nestedlearntest.clj",
+		"/Users/kasterma/adgoji/learn/learn/src/adgoji/rtb/modellearn/tproto.clj",
+		"/Users/kasterma/projects/HowDoo/lib/jquery/jquery-1.11.0.js",
+		"/Users/kasterma/projects/HowDoo/test-serverside/fb/jssdk/sdk.js",
+		"/Users/kasterma/projects/homepage/jqex/jqex.js",
+		"/Users/kasterma/projects/HowDoo/test-serverside/howdoo/fblogin.html",
+		"/Users/kasterma/adgoji/reporting/report/Makefile.bidfloorinfo",
+		"/Users/kasterma/adgoji/reporting/report/Makefile.featanalysis",
+		"/Users/kasterma/adgoji/model/learn/Makefile.bidinfos",
+		"/Users/kasterma/adgoji/reporting/report/Makefile.country",
+		"/Users/kasterma/adgoji/reporting/report/Makefile.bidinfoboost",
+		"/Users/kasterma/adgoji/reporting/report/Makefile.countclicks",
+		"/Users/kasterma/Desktop/fblogin.html",
+		"/Users/kasterma/projects/HowDoo/dev/testfb.js",
+		"/Users/kasterma/projects/cascalog-strange-behavior/src/testcascalog.clj",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/SublimeREPL/config/Clojure/Main.sublime-menu",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/Users/kasterma/Library/Application Support/Sublime Text 2/Packages/User/SublimeREPL.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"get-bidrequest-features",
+			")\n",
+			"model.frame",
+			"corcov(",
+			"pbinom",
+			"R_SEXP_to_vector(",
+			"R_SEXP_to_vector",
+			"R_igraph_is_di",
+			"R_SEXP_to_igraph",
+			"allocVec",
+			"igraph_to_",
+			"NEW_NUMERIC",
+			"R_igraph_to_SEXP",
+			"R_igraph_empty",
+			"graph.empty",
+			"getOper",
+			"dimension-fil",
+			"idfa-valid-filter",
+			"compile-",
+			"campaign",
+			"g++",
+			"getloginstatus",
+			"nativeInter",
+			"login",
+			"dude",
+			"hier",
+			"login",
+			"make-tap",
+			"get-model",
+			"aws",
+			"tproto",
+			"tpro",
+			"\"fb-root\"",
+			"\"fb-root\" div",
+			"hidden:",
+			"ui:",
+			"fetchLoginStatus",
+			"getLoginStatus",
+			"getlog",
+			"init:",
+			"testAPI",
+			"onlogin",
+			"getScript",
+			"button",
+			"endpoint",
+			"fb:login-button",
+			"email",
+			"public_profile",
+			"_nativeInterface",
+			"FB.Init",
+			"sani",
+			"prepare-su",
+			"push",
+			"_nativeInterface",
+			"fails on",
+			"fbAsync"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Vagrantfile",
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "vagrant/scripts/hadoop.sh",
+					"settings":
+					{
+						"buffer_size": 230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "vagrant/scripts/basic.sh",
+					"settings":
+					{
+						"buffer_size": 190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "vagrant/resources/dotprofile",
+					"settings":
+					{
+						"buffer_size": 98,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/kasterma/adgoji/rtb-features/rtb-features.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true
+}
