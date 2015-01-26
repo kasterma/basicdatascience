@@ -25,3 +25,7 @@ dat2 <- sample(seq(from=1, to=10^6), replace=TRUE, size=10^7, prob=1/seq(1,10^6)
 ggplot(dat=data.frame(x=dat2), aes(x=x)) + geom_freqpoly()
 max(table(dat2))
 length(table(dat2))
+
+
+format(object.size(unname(tdat)), units="MB")  # 3.8 MB
+format(object.size(unname(table(dat2))), units="MB") # 2.9 MB
