@@ -9,5 +9,8 @@ files/zookeeper-${ZOOK_VERSION}.tar.gz:
 build: files/zookeeper-3.4.9.tar.gz
 	docker build --build-arg VERSION=${VERSION},ZOOK_VERSION=${ZOOK_VERSION} -t kasterma/zook-ke:${VERSION} .
 
+ZOOK_HOSTNAME=zook-ke
+ZOOK_NET=net-ke
 run:
-	docker run -p2181:2181 -d kasterma/zook-ke:${VERSION}
+	-docker network create net-ke
+	docker run --net=${ZOOK_NET} --name=${ZOOK_HOSTNAME} --hostname=${ZOOK_HOSTNAME} -d kasterma/zook-ke:${VERSION}
