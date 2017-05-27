@@ -1,0 +1,6 @@
+[template]
+src = "server.properties.tmpl"
+dest = "/kafka/config/server.properties"
+keys = [
+"/zookeeper/connect"
+]
