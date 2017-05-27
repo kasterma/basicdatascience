@@ -6,3 +6,8 @@ this as work in three very broadly construed areas:
 1. Statistics
 2. Machine Learning
 3. Libraries
+
+# kafka
+
+- docker base image, tagged kasterma/base-ke.  Start with only
+  installing a jre.
